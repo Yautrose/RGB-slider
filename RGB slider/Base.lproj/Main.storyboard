@@ -19,14 +19,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Z5-03-BMB">
                                 <rect key="frame" x="16" y="20" width="288" height="124"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tNa-ts-2CT">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="115" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="tNa-ts-2CT">
                                 <rect key="frame" x="106" y="229" width="200" height="31"/>
+                                <connections>
+                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Q3B-J9-8tw"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="obl-fu-ce6">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="151" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="obl-fu-ce6">
                                 <rect key="frame" x="106" y="269" width="200" height="31"/>
+                                <connections>
+                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="7Me-9u-6VN"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MuF-JP-1jk">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="130" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="MuF-JP-1jk">
                                 <rect key="frame" x="106" y="189" width="200" height="31"/>
+                                <connections>
+                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="K3T-f7-t41"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gux-xl-ltY">
                                 <rect key="frame" x="16" y="189" width="50" height="30"/>
@@ -86,10 +95,19 @@
                             <constraint firstItem="tNa-ts-2CT" firstAttribute="top" secondItem="MuF-JP-1jk" secondAttribute="bottom" constant="10" id="qZZ-kU-uTB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="LEF-If-vrc" id="zaA-jk-epj"/>
+                        <outlet property="blueSlider" destination="obl-fu-ce6" id="wA9-ZP-B9W"/>
+                        <outlet property="greenLabel" destination="mMr-ja-Htz" id="Tlg-Cd-6Gh"/>
+                        <outlet property="greenSlider" destination="tNa-ts-2CT" id="jRk-P0-uYW"/>
+                        <outlet property="redLabel" destination="Gux-xl-ltY" id="WdX-qW-N73"/>
+                        <outlet property="redSlider" destination="MuF-JP-1jk" id="X4C-FA-AbL"/>
+                        <outlet property="rgbView" destination="5Z5-03-BMB" id="D9A-25-VIE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.75" y="83.450704225352112"/>
+            <point key="canvasLocation" x="-553" y="87"/>
         </scene>
     </scenes>
 </document>
