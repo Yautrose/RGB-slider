@@ -31,9 +31,9 @@ class ViewController: UIViewController {
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
         
-        redLabel.text = String(Int(redSlider.value))
-        greenLabel.text = String(Int(greenSlider.value))
-        blueLabel.text = String(Int(blueSlider.value))
+        redLabel.text = "Red: " +  String(Int(redSlider.value))
+        greenLabel.text = "Green: " +   String(Int(greenSlider.value))
+        blueLabel.text = "Blue: " +  String(Int(blueSlider.value))
         
         redLabel.textColor = .red
         greenLabel.textColor = .green
@@ -46,18 +46,18 @@ class ViewController: UIViewController {
     @IBAction func redSliderAction() {
         rgbView.backgroundColor = UIColor(red: CGFloat(redSlider.value)/255, green: CGFloat(greenSlider.value)/255, blue: CGFloat(blueSlider.value)/255, alpha: 1)
         
-        redLabel.text = String(Int(redSlider.value))
+        redLabel.text = "Red: " + String(Int(redSlider.value))
     }
     @IBAction func greenSliderAction() {
         rgbView.backgroundColor = UIColor(red: CGFloat(redSlider.value)/255, green: CGFloat(greenSlider.value)/255, blue: CGFloat(blueSlider.value)/255, alpha: 1)
         
-        greenLabel.text = String(Int(greenSlider.value))
+        greenLabel.text = "Green: " + String(Int(greenSlider.value))
 
     }
     @IBAction func blueSliderAction() {
         rgbView.backgroundColor = UIColor(red: CGFloat(redSlider.value)/255, green: CGFloat(greenSlider.value)/255, blue: CGFloat(blueSlider.value)/255, alpha: 1)
         
-        blueLabel.text = String(Int(blueSlider.value))
+        blueLabel.text = "Blue: " + String(Int(blueSlider.value))
     }
 }
 
